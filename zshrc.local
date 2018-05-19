@@ -1,0 +1,16 @@
+source /Users/ducdiep/dotfiles-local/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+fpath=(/usr/local/share/zsh-completions $fpath)
+
+export ZSH=/Users/ducdiep/dotfiles-local/.oh-my-zsh
+
+ZSH_THEME=wezm
+
+plugins=(
+  git
+)
+
+source $ZSH/oh-my-zsh.sh
+
+export PATH="/usr/local/opt/qt/bin:$PATH"
+export PATH="$(brew --prefix qt@5.5)/bin:$PATH"

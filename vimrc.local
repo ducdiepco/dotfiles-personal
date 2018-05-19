@@ -1,0 +1,30 @@
+nnoremap <leader>sub :%s///g<left><left>
+vnoremap <leader>sub :s///g<left><left>
+nnoremap <leader>bp orequire "pry"; binding.pry<esc>
+
+nmap <leader>~ :e.<cr>
+nmap <leader>q :q<cr>
+
+set textwidth=100
+set term=xterm-256color
+colorscheme afterglow
+
+" let g:ale_linters = {
+" \   'html': [],
+" \}
+
+let g:ale_fixers = {
+\   'html': ['tidy'],
+\}
+
+" Every time the user issues a :w command, Vim will automatically remove all trailing whitespace before saving.
+autocmd BufWritePre * %s/\s\+$//e
+
+nmap <leader>d :call pry#insert()<cr>
+let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
